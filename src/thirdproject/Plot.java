@@ -31,11 +31,9 @@ public class Plot extends JFrame {
         setVisible(true);
     }
 
-    public void Devices(double x, double y, int linhas) {
-        for(int i = 0; i < linhas; i++) {
+    public void Devices(double x, double y) {
             pcomp.addPoint2(x*500, y*500);
             pack();
-        }
     }
 
     public static void main(String[] args) {
@@ -76,7 +74,7 @@ class PlotComponent extends JComponent {
         
         g2d.setColor(Color.RED);
         for (Point2D p : points2) {
-            Shape point2 = new Ellipse2D.Double(p.getX(), p.getY(), 10, 10);
+            Shape point2 = new Ellipse2D.Double(p.getX(), p.getY(), 5, 5);
             g2d2.draw(point2);
         }
     }
