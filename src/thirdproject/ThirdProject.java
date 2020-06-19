@@ -8,6 +8,7 @@ public class ThirdProject {
         String dados[] = new String[2];
         ArrayList<Pair> array = new ArrayList();
         Plot image = new Plot();
+        Distance distance = new Distance();
 
         SimpleReader reader = new SimpleReader("mobile.txt");
         String line = reader.readLine();
@@ -18,11 +19,14 @@ public class ThirdProject {
             double x = Double.parseDouble(dados[1]);
             double y = Double.parseDouble(dados[2]);
             image.Devices(x, y);
+            distance.Distance(x, y);
             array.add(new Pair(posicao, x, y));
-            System.out.println("X: " + x + " - Y: " + y);
+            //System.out.println("X: " + x + " - Y: " + y);
             line = reader.readLine();
         }
         reader.close();
+        
+        
 
         /*System.out.println("---");
         System.out.println("--- PARÂMETROS");
