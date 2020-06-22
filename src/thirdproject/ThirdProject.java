@@ -21,9 +21,7 @@ public class ThirdProject {
             image.Devices(x, y);
             distance.Distance(x, y);
             array.add(new Pair(posicao, x, y));
-            //System.out.println("X: " + x + " - Y: " + y);
             String tower = distance.Distance(x, y);
-            System.out.println(tower);
             line = reader.readLine();
         }
         reader.close();
